@@ -1,0 +1,9 @@
+{
+  "remoteURL": "https://github.com/kangbeicai/math-knowledge-vault.git",
+  "gitLocation": "",
+  "syncinterval": 5,
+  "isSyncOnLoad": false,
+  "checkStatusOnLoad": true,
+  "noticeLevel": "ALL",
+  "showSyncSuccessNotice": true
+}
