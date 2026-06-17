@@ -33,5 +33,5 @@ $$
 
 ## 后续
 
-- [[坐标图、图册与坐标转换]]
-- [[推前与拉回]]
+- [[20 Concepts/02 Geometry and Topology/坐标图、图册与坐标转换|坐标图、图册与坐标转换]]
+- [[20 Concepts/02 Geometry and Topology/推前与拉回|推前与拉回]]

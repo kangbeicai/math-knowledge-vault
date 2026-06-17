@@ -14,7 +14,7 @@ tags:
 
 - 极限、连续与收敛
 - 一元与多元微分
-- [[多元链式法则与Jacobian]]
+- [[20 Concepts/00 Foundations/多元链式法则与Jacobian|多元链式法则与Jacobian]]
 - 积分与测度
 - 函数空间
 - 常微分方程

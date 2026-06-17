@@ -5,8 +5,8 @@ status: answered
 created: 2026-06-17
 updated: 2026-06-17
 related:
-  - "[[Lie括号]]"
-  - "[[向量场]]"
+  - "[[20 Concepts/02 Geometry and Topology/Lie括号|Lie括号]]"
+  - "[[20 Concepts/02 Geometry and Topology/向量场|向量场]]"
 tags:
   - question
 ---
