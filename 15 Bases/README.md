@@ -1,3 +1,7 @@
+---
+up: "[[10 Maps/知识库系统 MOC|知识库系统 MOC]]"
+---
+
 # Obsidian Bases
 
 本目录使用 Obsidian 原生 Bases，根据 Markdown Properties 动态生成视图。

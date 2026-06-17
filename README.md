@@ -1,3 +1,7 @@
+---
+up: "[[Home]]"
+---
+
 # Mathematics Knowledge Vault
 
 一个使用 **Obsidian + GitHub** 长期维护的个人数学知识系统。

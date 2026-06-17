@@ -1,5 +1,6 @@
 ---
 type: concept
+up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
 area: differential-geometry
 status: 初见
 created: 2026-06-17
@@ -67,6 +68,10 @@ $$
 ## 几何意义
 
 依次沿 $X$、$Y$、$-X$、$-Y$ 的流走一个很短时间，最终的二阶偏移由 $[X,Y]$ 控制。
+
+![[99 Assets/Images/Manifolds/lie-bracket-flow-commutator.svg|720]]
+
+图中两条路径从同一点出发，只是交换了沿 $X$ 与 $Y$ 小流前进的顺序。终点之间的微小差异说明 Lie 括号衡量的是向量场在邻域中的变化，而不是两个逐点向量的普通相减。
 
 因此
 

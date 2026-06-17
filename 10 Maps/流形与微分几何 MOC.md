@@ -1,5 +1,6 @@
 ---
 type: moc
+up: "[[10 Maps/数学知识地图|数学知识地图]]"
 area: differential-geometry
 status: active
 created: 2026-06-17
@@ -38,9 +39,8 @@ flowchart LR
 
 ## 图示导航
 
-- [[10 Maps/流形学习示意图规划|流形学习示意图规划]]：核心示意图的优先级、文件名和制作状态
-- 图片统一存放于 `99 Assets/Images/Manifolds/`
-- 图示只辅助空间直觉，正式定义与推导仍以概念页正文为准
+- [[图示导航]]：全库图片入口和项目级图示原则
+- [[流形学习示意图规划]]：流形专题图的优先级、文件名和制作状态
 
 ## 按需查阅：基础对象与工具
 
@@ -58,7 +58,15 @@ flowchart LR
 - [[20 Concepts/00 Foundations/向量空间与线性映射|向量空间与线性映射]]
 - [[20 Concepts/00 Foundations/对偶空间|对偶空间]]
 - [[20 Concepts/00 Foundations/多元链式法则与Jacobian|多元链式法则与Jacobian]]
+
+### 拓扑预备
+
+- [[20 Concepts/01 Topology/拓扑|拓扑]]
+- [[20 Concepts/01 Topology/拓扑空间与开集|拓扑空间与开集]]
 - [[20 Concepts/01 Topology/开集、连续与同胚|开集、连续与同胚]]
+- [[20 Concepts/01 Topology/子空间拓扑|子空间拓扑]]
+- [[20 Concepts/01 Topology/Hausdorff 条件|Hausdorff 条件]]
+- [[20 Concepts/01 Topology/拓扑基与第二可数|拓扑基与第二可数]]
 
 ## 1. 动机与流形结构
 

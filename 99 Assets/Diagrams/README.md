@@ -1,3 +1,7 @@
+---
+up: "[[99 Assets/README|附件与媒体资源]]"
+---
+
 # Editable Diagrams
 
 这里保存可编辑图源，例如：

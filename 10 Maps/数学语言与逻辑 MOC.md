@@ -1,5 +1,6 @@
 ---
 type: moc
+up: "[[10 Maps/数学知识地图|数学知识地图]]"
 area: foundations
 status: seed
 created: 2026-06-17

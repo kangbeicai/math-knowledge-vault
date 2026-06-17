@@ -1,5 +1,6 @@
 ---
 type: moc
+up: "[[Home]]"
 area: interdisciplinary
 status: active
 created: 2026-06-17
@@ -35,6 +36,7 @@ tags:
 ## 资源目录
 
 - [[99 Assets/README|附件与媒体资源]]
+- [[10 Maps/图示导航|图示导航]]
 - [[10 Maps/流形学习示意图规划|流形学习示意图规划]]
 
 ## 动态视图

@@ -1,5 +1,6 @@
 ---
 type: concept
+up: "[[10 Maps/微积分与分析 MOC|微积分与分析 MOC]]"
 area: calculus
 status: 初见
 created: 2026-06-17

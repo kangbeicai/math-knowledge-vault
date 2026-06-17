@@ -1,5 +1,6 @@
 ---
 type: moc
+up: ""
 area:
 status: seed
 created: "{{date}}"
