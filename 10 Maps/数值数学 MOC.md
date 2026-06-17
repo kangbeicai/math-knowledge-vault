@@ -2,6 +2,8 @@
 type: moc
 area: numerical-mathematics
 status: seed
+created: 2026-06-17
+updated: 2026-06-17
 tags:
   - moc
 ---

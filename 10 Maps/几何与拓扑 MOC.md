@@ -2,6 +2,8 @@
 type: moc
 area: geometry-topology
 status: seed
+created: 2026-06-17
+updated: 2026-06-17
 tags:
   - moc
 ---

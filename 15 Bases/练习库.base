@@ -1,0 +1,43 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "exercise-set"'
+properties:
+  file.name:
+    displayName: 练习
+  area:
+    displayName: 领域
+  status:
+    displayName: 状态
+  updated:
+    displayName: 最近更新
+  related:
+    displayName: 相关概念
+views:
+  - type: table
+    name: 待完成
+    filters:
+      or:
+        - 'status == "todo"'
+        - 'status == "doing"'
+    order:
+      - file.name
+      - area
+      - status
+      - related
+  - type: table
+    name: 已完成
+    filters:
+      and:
+        - 'status == "done"'
+    order:
+      - file.name
+      - area
+      - updated
+  - type: table
+    name: 全部练习
+    order:
+      - file.name
+      - area
+      - status
+      - updated

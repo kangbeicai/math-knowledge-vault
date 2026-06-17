@@ -2,6 +2,8 @@
 type: moc
 area: probability-statistics
 status: seed
+created: 2026-06-17
+updated: 2026-06-17
 tags:
   - moc
 ---

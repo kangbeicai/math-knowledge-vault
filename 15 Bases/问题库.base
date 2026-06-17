@@ -1,0 +1,42 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "question"'
+properties:
+  file.name:
+    displayName: 问题
+  area:
+    displayName: 领域
+  status:
+    displayName: 状态
+  updated:
+    displayName: 最近更新
+  related:
+    displayName: 相关概念
+views:
+  - type: table
+    name: 开放问题
+    filters:
+      and:
+        - 'status == "open"'
+    order:
+      - file.name
+      - area
+      - updated
+      - related
+  - type: table
+    name: 已回答
+    filters:
+      and:
+        - 'status == "answered"'
+    order:
+      - file.name
+      - area
+      - updated
+  - type: table
+    name: 全部问题
+    order:
+      - file.name
+      - area
+      - status
+      - updated

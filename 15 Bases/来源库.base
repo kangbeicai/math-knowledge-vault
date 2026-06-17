@@ -1,0 +1,46 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "source"'
+properties:
+  file.name:
+    displayName: 来源
+  source_type:
+    displayName: 类型
+  author:
+    displayName: 作者
+  year:
+    displayName: 年份
+  status:
+    displayName: 状态
+  related:
+    displayName: 相关主题
+views:
+  - type: table
+    name: 阅读中
+    filters:
+      and:
+        - 'status == "reading"'
+    order:
+      - file.name
+      - source_type
+      - author
+      - year
+      - related
+  - type: table
+    name: 未阅读
+    filters:
+      and:
+        - 'status == "unread"'
+    order:
+      - file.name
+      - source_type
+      - year
+  - type: table
+    name: 全部来源
+    order:
+      - file.name
+      - source_type
+      - status
+      - author
+      - year

@@ -1,0 +1,44 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "concept"'
+properties:
+  file.name:
+    displayName: 概念
+  area:
+    displayName: 领域
+  status:
+    displayName: 成熟度
+  updated:
+    displayName: 最近更新
+  prerequisites:
+    displayName: 前置知识
+views:
+  - type: table
+    name: 全部概念
+    order:
+      - file.name
+      - area
+      - status
+      - updated
+      - prerequisites
+  - type: table
+    name: 待深化
+    filters:
+      or:
+        - 'status == "初见"'
+        - 'status == "待修正"'
+    order:
+      - file.name
+      - area
+      - status
+      - prerequisites
+  - type: table
+    name: 可应用
+    filters:
+      and:
+        - 'status == "可应用"'
+    order:
+      - file.name
+      - area
+      - updated

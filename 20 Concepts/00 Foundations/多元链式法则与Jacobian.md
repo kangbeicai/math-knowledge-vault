@@ -2,6 +2,8 @@
 type: concept
 area: calculus
 status: 初见
+created: 2026-06-17
+updated: 2026-06-17
 tags:
   - concept
 ---
@@ -10,18 +12,18 @@ tags:
 
 设
 
-\[
+$$
 F:\mathbb R^n\to\mathbb R^m,\qquad
 G:\mathbb R^m\to\mathbb R^k.
-\]
+$$
 
 则
 
-\[
+$$
 D(G\circ F)_x
 =
 DG_{F(x)}\circ DF_x.
-\]
+$$
 
 在坐标中对应 Jacobian 矩阵乘法。
 
