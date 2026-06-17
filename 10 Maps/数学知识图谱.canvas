@@ -1,118 +1,20 @@
 {
-  "nodes": [
-    {
-      "id": "home",
-      "type": "file",
-      "file": "Home.md",
-      "x": 0,
-      "y": 0,
-      "width": 300,
-      "height": 180
-    },
-    {
-      "id": "math",
-      "type": "file",
-      "file": "10 Maps/数学知识地图.md",
-      "x": 420,
-      "y": 0,
-      "width": 320,
-      "height": 180
-    },
-    {
-      "id": "manifold",
-      "type": "file",
-      "file": "10 Maps/流形与微分几何 MOC.md",
-      "x": 840,
-      "y": -100,
-      "width": 350,
-      "height": 200
-    },
-    {
-      "id": "path",
-      "type": "file",
-      "file": "30 Learning Paths/流形与微分几何学习路径.md",
-      "x": 1260,
-      "y": -100,
-      "width": 360,
-      "height": 200
-    },
-    {
-      "id": "linear",
-      "type": "file",
-      "file": "10 Maps/线性代数 MOC.md",
-      "x": 840,
-      "y": 180,
-      "width": 320,
-      "height": 180
-    },
-    {
-      "id": "analysis",
-      "type": "file",
-      "file": "10 Maps/微积分与分析 MOC.md",
-      "x": 840,
-      "y": 400,
-      "width": 320,
-      "height": 180
-    },
-    {
-      "id": "numerical",
-      "type": "file",
-      "file": "10 Maps/数值数学 MOC.md",
-      "x": 1260,
-      "y": 340,
-      "width": 320,
-      "height": 180
-    }
-  ],
-  "edges": [
-    {
-      "id": "e1",
-      "fromNode": "home",
-      "fromSide": "right",
-      "toNode": "math",
-      "toSide": "left"
-    },
-    {
-      "id": "e2",
-      "fromNode": "math",
-      "fromSide": "right",
-      "toNode": "manifold",
-      "toSide": "left"
-    },
-    {
-      "id": "e3",
-      "fromNode": "manifold",
-      "fromSide": "right",
-      "toNode": "path",
-      "toSide": "left"
-    },
-    {
-      "id": "e4",
-      "fromNode": "math",
-      "fromSide": "right",
-      "toNode": "linear",
-      "toSide": "left"
-    },
-    {
-      "id": "e5",
-      "fromNode": "math",
-      "fromSide": "right",
-      "toNode": "analysis",
-      "toSide": "left"
-    },
-    {
-      "id": "e6",
-      "fromNode": "linear",
-      "fromSide": "right",
-      "toNode": "numerical",
-      "toSide": "left"
-    },
-    {
-      "id": "e7",
-      "fromNode": "analysis",
-      "fromSide": "right",
-      "toNode": "numerical",
-      "toSide": "left"
-    }
-  ]
+	"nodes":[
+		{"id":"home","type":"file","file":"Home.md","x":0,"y":0,"width":300,"height":180},
+		{"id":"math","type":"file","file":"10 Maps/数学知识地图.md","x":420,"y":0,"width":320,"height":180},
+		{"id":"manifold","type":"file","file":"10 Maps/流形与微分几何 MOC.md","x":840,"y":-100,"width":350,"height":200},
+		{"id":"path","type":"file","file":"30 Learning Paths/流形与微分几何学习路径.md","x":1260,"y":-100,"width":360,"height":200},
+		{"id":"linear","type":"file","file":"10 Maps/线性代数 MOC.md","x":840,"y":180,"width":320,"height":180},
+		{"id":"analysis","type":"file","file":"10 Maps/微积分与分析 MOC.md","x":840,"y":400,"width":320,"height":180},
+		{"id":"numerical","type":"file","file":"10 Maps/数值数学 MOC.md","x":1260,"y":340,"width":320,"height":180}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"home","fromSide":"right","toNode":"math","toSide":"left"},
+		{"id":"e2","fromNode":"math","fromSide":"right","toNode":"manifold","toSide":"left"},
+		{"id":"e3","fromNode":"manifold","fromSide":"right","toNode":"path","toSide":"left"},
+		{"id":"e4","fromNode":"math","fromSide":"right","toNode":"linear","toSide":"left"},
+		{"id":"e5","fromNode":"math","fromSide":"right","toNode":"analysis","toSide":"left"},
+		{"id":"e6","fromNode":"linear","fromSide":"right","toNode":"numerical","toSide":"left"},
+		{"id":"e7","fromNode":"analysis","fromSide":"right","toNode":"numerical","toSide":"left"}
+	]
 }
