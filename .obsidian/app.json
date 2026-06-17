@@ -4,5 +4,8 @@
   "newFileFolderPath": "00 Inbox",
   "attachmentFolderPath": "Attachments",
   "showUnsupportedFiles": true,
-  "useMarkdownLinks": false
+  "useMarkdownLinks": false,
+  "foldIndent": true,
+  "showIndentGuide": true,
+  "readableLineLength": true
 }
