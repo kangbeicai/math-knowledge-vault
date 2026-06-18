@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">圆周的子空间拓扑示意图</title>
+  <desc id="desc">左图显示平面中的开圆盘与圆周相交得到圆周上的开弧。右图显示平面中包含圆周上一点的开圆盘与圆周相交时得到一小段弧，而不是只得到单点。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#6b7280"/>
+    </marker>
+    <style>
+      .panel { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1.5; }
+      .axis { stroke: #9ca3af; stroke-width: 1.2; marker-end: url(#arrow); }
+      .circle { fill: none; stroke: #111827; stroke-width: 3.5; }
+      .disk { fill: #93c5fd; fill-opacity: 0.25; stroke: #2563eb; stroke-width: 2.8; stroke-dasharray: 8 6; }
+      .arc { fill: none; stroke: #ef4444; stroke-width: 8; stroke-linecap: round; }
+      .ghost-arc { fill: none; stroke: #fca5a5; stroke-width: 8; stroke-linecap: round; opacity: 0.35; }
+      .point { fill: #111827; stroke: #ffffff; stroke-width: 2; }
+      .text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .title { font-size: 22px; font-weight: 700; }
+      .label { font-size: 17px; }
+      .small { font-size: 14px; fill: #4b5563; }
+      .math { font-family: "Times New Roman", serif; font-size: 19px; fill: #111827; }
+      .formula { font-family: "Times New Roman", serif; font-size: 22px; fill: #111827; }
+      .callout { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.2; }
+      .bad { fill: #dc2626; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="520" fill="#ffffff"/>
+
+  <rect x="30" y="28" width="455" height="464" rx="8" class="panel"/>
+  <rect x="515" y="28" width="455" height="464" rx="8" class="panel"/>
+
+  <!-- Left panel: open arc -->
+  <text x="58" y="66" class="text title">1. 开弧怎样产生</text>
+  <text x="58" y="94" class="text small">在大空间 R² 中取开圆盘 V，再与圆周 S¹ 相交</text>
+
+  <line x1="80" y1="262" x2="430" y2="262" class="axis"/>
+  <line x1="255" y1="430" x2="255" y2="122" class="axis"/>
+  <text x="418" y="286" class="text small">x</text>
+  <text x="268" y="139" class="text small">y</text>
+
+  <circle cx="255" cy="262" r="120" class="circle"/>
+  <text x="140" y="165" class="math">S¹</text>
+
+  <!-- Open disk intersects upper-right arc. Arc endpoints are the actual intersections of this disk and S¹. -->
+  <circle cx="338" cy="178" r="72" class="disk"/>
+  <text x="378" y="126" class="math">V</text>
+
+  <!-- Arc on the unit circle inside the disk -->
+  <path d="M274.7,143.6 A120,120 0 0 1 373.1,240.9" class="arc"/>
+  <circle cx="274.7" cy="143.6" r="4.2" fill="#ef4444"/>
+  <circle cx="373.1" cy="240.9" r="4.2" fill="#ef4444"/>
+
+  <rect x="78" y="392" width="350" height="58" rx="6" class="callout"/>
+  <text x="96" y="417" class="formula">U = V ∩ S¹</text>
+  <text x="214" y="417" class="text label">是圆周中的开弧</text>
+  <text x="96" y="442" class="text small">红色部分只看作 S¹ 里面的集合。</text>
+
+  <!-- Right panel: point is not open -->
+  <text x="543" y="66" class="text title">2. 单点为什么不行</text>
+  <text x="543" y="94" class="text small">任何包含 p 的平面开圆盘，都会切出一段弧</text>
+
+  <line x1="565" y1="262" x2="915" y2="262" class="axis"/>
+  <line x1="740" y1="430" x2="740" y2="122" class="axis"/>
+  <text x="903" y="286" class="text small">x</text>
+  <text x="753" y="139" class="text small">y</text>
+
+  <circle cx="740" cy="262" r="120" class="circle"/>
+  <text x="625" y="165" class="math">S¹</text>
+
+  <!-- Point p and an open disk around p. Arc endpoints are the actual intersections of this disk and S¹. -->
+  <circle cx="824.9" cy="177.1" r="54" class="disk"/>
+  <path d="M779.1,148.5 A120,120 0 0 1 853.5,222.9" class="arc"/>
+  <circle cx="779.1" cy="148.5" r="4.2" fill="#ef4444"/>
+  <circle cx="853.5" cy="222.9" r="4.2" fill="#ef4444"/>
+  <circle cx="824.9" cy="177.1" r="7" class="point"/>
+  <text x="837" y="169" class="math">p</text>
+  <text x="860" y="126" class="math">V</text>
+
+  <rect x="558" y="392" width="370" height="58" rx="6" class="callout"/>
+  <text x="576" y="417" class="formula">V ∩ S¹</text>
+  <text x="654" y="417" class="text label">是一段弧，</text>
+  <text x="748" y="417" class="text label bad">不是 {p}</text>
+  <text x="576" y="442" class="text small">因此 {p} 不是圆周子空间拓扑中的开集。</text>
+</svg>

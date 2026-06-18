@@ -1,5 +1,18 @@
 ---
+type: index
 up: "[[10 Maps/知识库系统 MOC|知识库系统 MOC]]"
+track:
+order:
+prev: ""
+next: ""
+area: interdisciplinary
+status: active
+created: 2026-06-18
+updated: 2026-06-18
+tags:
+  - index
+  - assets
+aliases: []
 ---
 
 # 附件与媒体资源

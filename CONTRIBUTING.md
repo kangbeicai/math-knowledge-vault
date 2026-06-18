@@ -1,5 +1,16 @@
 ---
+type: meta
 up: "[[10 Maps/知识库系统 MOC|知识库系统 MOC]]"
+track:
+order:
+prev: ""
+next: ""
+status: active
+created: 2026-06-18
+updated: 2026-06-18
+tags:
+  - meta
+aliases: []
 ---
 
 # 知识库维护规范

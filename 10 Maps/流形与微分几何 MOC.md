@@ -1,19 +1,26 @@
 ---
 type: moc
 up: "[[10 Maps/数学知识地图|数学知识地图]]"
+track:
+order:
+prev: ""
+next: ""
 area: differential-geometry
 status: active
 created: 2026-06-17
 updated: 2026-06-17
-aliases:
-  - Manifold MOC
 tags:
   - moc
   - manifold
   - differential-geometry
+aliases:
+  - Manifold MOC
 ---
 
 # 流形与微分几何 MOC
+
+> [!tip]
+> 如果想按顺序学习，先走 [[30 Learning Paths/流形与微分几何学习路径|流形与微分几何学习路径]]。本页更像总地图，用来查看主线、支撑概念、练习和问题入口。
 
 ## 核心学习主线
 
@@ -62,6 +69,7 @@ flowchart LR
 ### 拓扑预备
 
 - [[20 Concepts/01 Topology/拓扑|拓扑]]
+- [[20 Concepts/01 Topology/距离、邻域与开球|距离、邻域与开球]]：邻域、开邻域和开球的基础定义
 - [[20 Concepts/01 Topology/拓扑空间与开集|拓扑空间与开集]]
 - [[20 Concepts/01 Topology/开集、连续与同胚|开集、连续与同胚]]
 - [[20 Concepts/01 Topology/子空间拓扑|子空间拓扑]]

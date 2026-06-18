@@ -1,10 +1,19 @@
 ---
 type: concept
 up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
+track:
+order:
+prev: ""
+next: ""
 area: geometry-topology
 status: 可计算
 created: 2026-06-17
 updated: 2026-06-17
+tags:
+  - concept
+  - manifold-example
+  - lie-group
+  - rotation
 aliases:
   - SO3
   - SO(3)
@@ -19,11 +28,7 @@ related:
   - "[[球面 S2]]"
   - "[[切空间]]"
   - "[[向量场的流]]"
-tags:
-  - concept
-  - manifold-example
-  - lie-group
-  - rotation
+sources: []
 ---
 
 # 特殊正交群 $SO(3)$

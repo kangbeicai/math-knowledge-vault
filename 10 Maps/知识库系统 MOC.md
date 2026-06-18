@@ -1,15 +1,19 @@
 ---
 type: moc
 up: "[[Home]]"
+track:
+order:
+prev: ""
+next: ""
 area: interdisciplinary
 status: active
 created: 2026-06-17
 updated: 2026-06-17
-aliases:
-  - Vault System MOC
 tags:
   - moc
   - meta
+aliases:
+  - Vault System MOC
 ---
 
 # 知识库系统 MOC

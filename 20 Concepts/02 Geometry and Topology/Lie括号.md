@@ -1,19 +1,24 @@
 ---
 type: concept
 up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
+track:
+order:
+prev: ""
+next: ""
 area: differential-geometry
 status: 初见
 created: 2026-06-17
 updated: 2026-06-17
+tags:
+  - concept
+  - lie-bracket
 aliases:
   - Lie bracket
 prerequisites:
   - "[[向量场]]"
 related:
   - "[[向量场的流]]"
-tags:
-  - concept
-  - lie-bracket
+sources: []
 ---
 
 # Lie括号

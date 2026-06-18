@@ -1,12 +1,17 @@
 ---
 type: moc
 up: "[[10 Maps/数学知识地图|数学知识地图]]"
+track:
+order:
+prev: ""
+next: ""
 area: probability-statistics
 status: seed
 created: 2026-06-17
 updated: 2026-06-17
 tags:
   - moc
+aliases: []
 ---
 
 # 概率与统计 MOC

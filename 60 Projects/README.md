@@ -1,5 +1,17 @@
 ---
+type: index
 up: "[[Home]]"
+track:
+order:
+prev: ""
+next: ""
+area: mathematics
+status: active
+created: 2026-06-18
+updated: 2026-06-18
+tags:
+  - index
+aliases: []
 ---
 
 # Projects

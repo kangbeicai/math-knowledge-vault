@@ -1,13 +1,17 @@
 ---
 type: moc
 up: ""
+track:
+order:
+prev: ""
+next: ""
 area:
 status: seed
 created: "{{date}}"
 updated: "{{date}}"
-aliases: []
 tags:
   - moc
+aliases: []
 ---
 
 # {{title}}

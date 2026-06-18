@@ -1,12 +1,16 @@
 ---
 type: home
+track:
+order:
+prev: ""
+next: ""
 status: active
 created: 2026-06-17
 updated: 2026-06-17
-aliases:
-  - 数学知识库主页
 tags:
   - home
+aliases:
+  - 数学知识库主页
 ---
 
 # 数学知识库

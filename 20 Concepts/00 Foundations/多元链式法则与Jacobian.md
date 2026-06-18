@@ -1,12 +1,20 @@
 ---
 type: concept
 up: "[[10 Maps/微积分与分析 MOC|微积分与分析 MOC]]"
+track:
+order:
+prev: ""
+next: ""
 area: calculus
 status: 初见
 created: 2026-06-17
 updated: 2026-06-17
 tags:
   - concept
+aliases: []
+prerequisites: []
+related: []
+sources: []
 ---
 
 # 多元链式法则与 Jacobian

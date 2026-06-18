@@ -1,5 +1,18 @@
 ---
+type: index
 up: "[[99 Assets/README|附件与媒体资源]]"
+track:
+order:
+prev: ""
+next: ""
+area: interdisciplinary
+status: active
+created: 2026-06-18
+updated: 2026-06-18
+tags:
+  - index
+  - assets
+aliases: []
 ---
 
 # Images

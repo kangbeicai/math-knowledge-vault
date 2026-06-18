@@ -1,5 +1,19 @@
 ---
+type: index
 up: "[[10 Maps/图示导航|图示导航]]"
+track:
+order:
+prev: ""
+next: ""
+area: interdisciplinary
+status: active
+created: 2026-06-18
+updated: 2026-06-18
+tags:
+  - index
+  - manifold
+  - assets
+aliases: []
 ---
 
 # Manifold Images

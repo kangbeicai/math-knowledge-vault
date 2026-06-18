@@ -1,15 +1,21 @@
 ---
 type: question
 up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
+track:
+order:
+prev: ""
+next: ""
 area: differential-geometry
 status: answered
 created: 2026-06-17
 updated: 2026-06-17
+tags:
+  - question
+aliases: []
 related:
   - "[[20 Concepts/02 Geometry and Topology/Lie括号|Lie括号]]"
   - "[[20 Concepts/02 Geometry and Topology/向量场|向量场]]"
-tags:
-  - question
+sources: []
 ---
 
 # 为什么 Lie 括号不能只由单点向量决定

@@ -1,12 +1,17 @@
 ---
 type: moc
 up: "[[10 Maps/数学知识地图|数学知识地图]]"
+track:
+order:
+prev: ""
+next: ""
 area: analysis
 status: seed
 created: 2026-06-17
 updated: 2026-06-17
 tags:
   - moc
+aliases: []
 ---
 
 # 微积分与分析 MOC
