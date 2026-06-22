@@ -1,9 +1,9 @@
 ---
 type: concept
 up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
-track:
-order:
-prev: ""
+track: manifold-core
+order: 240
+prev: "[[20 Concepts/02 Geometry and Topology/微分形式的拉回|微分形式的拉回]]"
 next: ""
 area: differential-geometry
 status: 初见
@@ -78,3 +78,8 @@ Stokes 定理把局部微分与全局积分联系起来，是微分几何、拓�
 
 > [!warning]
 > 被积对象不是普通标量函数，而是与流形维数匹配的微分形式；方向改变会改变积分符号。
+
+## 导航
+
+- 上一页：[[20 Concepts/02 Geometry and Topology/微分形式的拉回|微分形式的拉回]]
+

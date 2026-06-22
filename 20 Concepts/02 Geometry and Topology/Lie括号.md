@@ -1,10 +1,10 @@
 ---
 type: concept
 up: "[[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]"
-track:
-order:
-prev: ""
-next: ""
+track: manifold-core
+order: 150
+prev: "[[20 Concepts/02 Geometry and Topology/向量场的流|向量场的流]]"
+next: "[[20 Concepts/02 Geometry and Topology/余切空间|余切空间]]"
 area: differential-geometry
 status: 初见
 created: 2026-06-17
@@ -94,3 +94,9 @@ Lie 括号依赖 $X,Y$ 在点附近的变化率，不能只用 $X(p),Y(p)$ 两�
 
 - 可积分布与 Frobenius 定理
 - 李群与李代数
+
+## 导航
+
+- 上一页：[[20 Concepts/02 Geometry and Topology/向量场的流|向量场的流]]
+- 下一步：[[20 Concepts/02 Geometry and Topology/余切空间|余切空间]]
+
