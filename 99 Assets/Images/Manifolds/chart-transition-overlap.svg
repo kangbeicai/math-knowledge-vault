@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">重叠区域上的坐标转换</title>
+  <desc id="desc">两张坐标图在流形上的重叠区域对应两套坐标。坐标转换从 alpha 坐标出发，先通过 alpha 的反函数回到流形上的点，再通过 beta 坐标图得到 beta 坐标。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .title { font-size: 31px; font-weight: 700; }
+      .subtitle { font-size: 17px; fill: #4b5563; }
+      .section { font-size: 20px; font-weight: 700; }
+      .label { font-size: 17px; }
+      .small { font-size: 14px; fill: #4b5563; }
+      .math { font-family: "Times New Roman", serif; font-size: 23px; fill: #111827; }
+      .panel { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1.5; }
+      .manifold { fill: #eef2ff; stroke: #4f46e5; stroke-width: 3; }
+      .ua { fill: #dbeafe; fill-opacity: 0.78; stroke: #2563eb; stroke-width: 3; }
+      .ub { fill: #fee2e2; fill-opacity: 0.76; stroke: #dc2626; stroke-width: 3; }
+      .overlap { fill: #d1fae5; fill-opacity: 0.9; stroke: #059669; stroke-width: 3; }
+      .coordA { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.5; }
+      .coordB { fill: #fef2f2; stroke: #dc2626; stroke-width: 2.5; }
+      .axis { fill: none; stroke: #334155; stroke-width: 2.8; stroke-linecap: round; marker-end: url(#arrow); }
+      .arrow { fill: none; stroke: #334155; stroke-width: 3.2; stroke-linecap: round; marker-end: url(#arrow); }
+      .arrow-blue { fill: none; stroke: #2563eb; stroke-width: 3.2; stroke-linecap: round; marker-end: url(#arrow-blue); }
+      .arrow-red { fill: none; stroke: #dc2626; stroke-width: 3.2; stroke-linecap: round; marker-end: url(#arrow-red); }
+      .point { fill: #111827; stroke: #ffffff; stroke-width: 2; }
+      .note { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.3; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#ffffff"/>
+
+  <text x="600" y="48" text-anchor="middle" class="text title">重叠区域上的坐标转换</text>
+  <text x="600" y="80" text-anchor="middle" class="text subtitle">同一个流形点，在两张坐标图中有两套坐标；坐标转换把一套坐标换成另一套</text>
+
+  <!-- Manifold panel -->
+  <rect x="390" y="118" width="420" height="350" rx="10" class="panel"/>
+  <text x="600" y="152" text-anchor="middle" class="text section">流形 M 上的重叠区域</text>
+
+  <path d="M452 318 C474 210, 605 178, 718 227 C794 260, 779 375, 679 423 C553 484, 423 428, 452 318 Z" class="manifold"/>
+  <ellipse cx="565" cy="315" rx="125" ry="88" transform="rotate(-20 565 315)" class="ua"/>
+  <ellipse cx="645" cy="320" rx="125" ry="88" transform="rotate(20 645 320)" class="ub"/>
+  <ellipse cx="606" cy="318" rx="72" ry="58" class="overlap"/>
+
+  <text x="500" y="236" class="math">Uα</text>
+  <text x="704" y="246" class="math">Uβ</text>
+  <text x="574" y="394" class="text label">重叠区域</text>
+  <circle cx="610" cy="318" r="8" class="point"/>
+  <text x="625" y="311" class="math">p</text>
+
+  <!-- Alpha coordinate panel -->
+  <rect x="55" y="150" width="285" height="250" rx="10" class="coordA"/>
+  <text x="197" y="184" text-anchor="middle" class="text section">α 坐标</text>
+  <path d="M100 340 H300" class="axis"/>
+  <path d="M100 340 V220" class="axis"/>
+  <ellipse cx="202" cy="293" rx="66" ry="42" class="overlap"/>
+  <circle cx="202" cy="293" r="7" fill="#2563eb" class="point"/>
+  <text x="216" y="286" class="math">φα(p)</text>
+  <text x="165" y="365" class="text small">φα(Uα∩Uβ)</text>
+
+  <!-- Beta coordinate panel -->
+  <rect x="860" y="150" width="285" height="250" rx="10" class="coordB"/>
+  <text x="1002" y="184" text-anchor="middle" class="text section">β 坐标</text>
+  <path d="M905 340 H1105" class="axis"/>
+  <path d="M905 340 V220" class="axis"/>
+  <ellipse cx="1006" cy="293" rx="66" ry="42" class="overlap"/>
+  <circle cx="1006" cy="293" r="7" fill="#dc2626" class="point"/>
+  <text x="1020" y="286" class="math">φβ(p)</text>
+  <text x="968" y="365" class="text small">φβ(Uα∩Uβ)</text>
+
+  <!-- Arrows -->
+  <path d="M340 280 C382 247, 410 242, 448 268" class="arrow-blue"/>
+  <text x="382" y="235" class="math">φα⁻¹</text>
+  <text x="368" y="258" class="text small">回到流形</text>
+
+  <path d="M752 268 C804 238, 832 245, 860 280" class="arrow-red"/>
+  <text x="810" y="235" class="math">φβ</text>
+  <text x="792" y="258" class="text small">得到 β 坐标</text>
+
+  <path d="M315 455 C480 585, 720 585, 888 455" class="arrow"/>
+  <text x="600" y="604" text-anchor="middle" class="math">φβ ∘ φα⁻¹</text>
+  <text x="600" y="632" text-anchor="middle" class="text label">坐标转换：α 坐标 → β 坐标</text>
+
+  <rect x="290" y="650" width="620" height="44" rx="7" class="note"/>
+  <text x="600" y="678" text-anchor="middle" class="text label">复合顺序从右往左：先做 φα⁻¹，再做 φβ。</text>
+</svg>
