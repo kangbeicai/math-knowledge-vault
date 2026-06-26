@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">切向量的物理图像</title>
+  <desc id="desc">一条曲线经过点 p，点 p 处画出瞬时速度箭头 v，并用函数 f 的读数变化解释方向导数。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#059669"/>
+    </marker>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="420" fill="#f8fafc"/>
+
+  <g transform="translate(52 44)">
+    <rect x="0" y="0" width="520" height="330" rx="18" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft-shadow)"/>
+    <text x="26" y="40" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" fill="#0f172a">粒子经过流形上的点</text>
+    <text x="26" y="70" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#475569">切向量记录的是 t=0 这一瞬间的速度</text>
+
+    <path d="M54 248 C126 130, 238 98, 324 166 C386 215, 426 150, 478 78"
+          fill="none" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+    <path d="M54 248 C126 130, 238 98, 324 166 C386 215, 426 150, 478 78"
+          fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="266" cy="139" r="9" fill="#dc2626" stroke="#ffffff" stroke-width="4"/>
+    <text x="247" y="118" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#dc2626">p</text>
+
+    <line x1="266" y1="139" x2="362" y2="166" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <text x="376" y="173" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#2563eb">v</text>
+    <text x="312" y="205" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#1e293b">瞬时速度</text>
+
+    <circle cx="213" cy="126" r="5" fill="#64748b"/>
+    <circle cx="318" cy="160" r="5" fill="#64748b"/>
+    <text x="116" y="287" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#475569">曲线 γ(t)：粒子的运动轨迹</text>
+  </g>
+
+  <g transform="translate(620 70)">
+    <rect x="0" y="0" width="240" height="260" rx="18" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft-shadow)"/>
+    <text x="24" y="42" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" fill="#0f172a">函数读数</text>
+    <text x="24" y="74" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#475569">f 像一个传感器</text>
+
+    <rect x="36" y="105" width="168" height="42" rx="8" fill="#e0f2fe" stroke="#38bdf8"/>
+    <text x="62" y="132" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" font-weight="700" fill="#0369a1">f(γ(t))</text>
+
+    <line x1="120" y1="160" x2="120" y2="208" stroke="#059669" stroke-width="4" marker-end="url(#arrow-green)"/>
+    <text x="58" y="238" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#1f2937">变化率就是 v[f]</text>
+  </g>
+
+  <path d="M570 210 C600 210, 603 196, 625 196" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+
+  <text x="88" y="398" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#475569">
+    同一瞬间的速度 v 可以用来测量任何光滑函数 f 沿该方向的一阶变化率。
+  </text>
+</svg>
