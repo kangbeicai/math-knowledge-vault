@@ -8,7 +8,7 @@ next: ""
 area: differential-geometry
 status: active
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-26
 tags:
   - moc
   - manifold
@@ -28,17 +28,18 @@ aliases:
 flowchart LR
     A[为什么需要流形] --> B[拓扑流形]
     B --> C[坐标图与光滑结构]
-    C --> D[光滑映射]
-    D --> E[切向量与切空间]
-    E --> F[向量场与流]
-    F --> G[Lie括号]
-    E --> H[子流形]
-    E --> I[余切空间]
-    E --> J[张量]
-    I --> J
-    J --> K[微分形式]
-    K --> L[楔积与外微分]
-    L --> M[拉回与Stokes]
+    C --> D[标量场]
+    D --> E[光滑映射]
+    E --> F[切向量与切空间]
+    F --> G[向量场与流]
+    G --> H[Lie括号]
+    F --> I[子流形]
+    F --> J[余切空间]
+    F --> K[张量]
+    J --> K
+    K --> L[微分形式]
+    L --> M[楔积与外微分]
+    M --> N[拉回与Stokes]
 ```
 
 > [!note]
@@ -83,6 +84,7 @@ flowchart LR
 - [[20 Concepts/02 Geometry and Topology/坐标图、图册与坐标转换|坐标图、图册与坐标转换]]
 - [[20 Concepts/02 Geometry and Topology/圆与球面的坐标图|圆与球面的坐标图]]
 - [[20 Concepts/02 Geometry and Topology/光滑流形|光滑流形]]
+- [[20 Concepts/02 Geometry and Topology/标量场|标量场]]
 - [[20 Concepts/02 Geometry and Topology/光滑映射与微分同胚|光滑映射与微分同胚]]
 
 ## 2. 切空间、映射与子流形
