@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Tangent space as possible velocities</title>
+  <desc id="desc">Several curves pass through one point p on a manifold. Their instantaneous velocities at p form the tangent space T_p M.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d97706"/>
+    </marker>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="420" fill="#f8fafc"/>
+
+  <path d="M110 280 C210 120, 360 92, 510 170 C650 242, 735 220, 820 120"
+        fill="none" stroke="#cbd5e1" stroke-width="70" stroke-linecap="round"/>
+  <path d="M110 280 C210 120, 360 92, 510 170 C650 242, 735 220, 820 120"
+        fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <text x="130" y="318" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#334155">M</text>
+
+  <g filter="url(#soft-shadow)">
+    <path d="M325 226 L595 150 L712 218 L442 294 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  </g>
+  <text x="626" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">T_p M</text>
+
+  <circle cx="488" cy="220" r="9" fill="#dc2626" stroke="#ffffff" stroke-width="4"/>
+  <text x="474" y="202" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#dc2626">p</text>
+
+  <path d="M350 305 C412 245, 450 224, 488 220 C536 216, 574 184, 638 116"
+        fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <path d="M324 170 C388 205, 438 218, 488 220 C544 222, 610 250, 700 308"
+        fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+  <path d="M440 104 C456 154, 470 194, 488 220 C515 260, 536 290, 568 342"
+        fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+
+  <line x1="488" y1="220" x2="584" y2="174" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+  <line x1="488" y1="220" x2="596" y2="248" stroke="#059669" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-emerald)"/>
+  <line x1="488" y1="220" x2="510" y2="306" stroke="#d97706" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+
+  <text x="594" y="178" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2563eb">v_1</text>
+  <text x="604" y="266" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#059669">v_2</text>
+  <text x="516" y="326" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706">v_3</text>
+
+  <text x="104" y="64" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28" font-weight="700" fill="#0f172a">T_p M：点 p 处所有可能的瞬时速度</text>
+  <text x="104" y="96" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#475569">不同曲线可以经过同一个点；它们在 p 处的一阶速度都属于同一个切空间。</text>
+</svg>
