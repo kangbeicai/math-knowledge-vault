@@ -226,6 +226,8 @@ Quartz 是面向 Obsidian 知识库的静态网站生成器，通常较容易获
 | `.github/deploy/build-local.ps1` | 使用 `pwsh 7` 在本地复现完整构建 |
 | `.github/deploy/git_config.local.json` | 本地构建时使用的仓库与基础路径配置 |
 
+云端构建时，当前知识库必须检出到 `$GITHUB_WORKSPACE` 根目录，外部 VuePress 构建器才放在 `site/` 子目录。部署 Action 需要从根目录中的 `.git` 读取当前仓库远端；如果两个仓库都放在子目录，部署阶段会以 Git `exit 128` 失败。
+
 云端工作流只在以下情况运行：
 
 - 推送到 `main`；

@@ -18,27 +18,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout knowledge vault
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
       - name: Checkout pinned site builder
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: LincZero/LincZero.github.io
           ref: 54cdc975bfad38ccd60244430afecc511d4592e1
           fetch-depth: 1
           path: site
 
-      - name: Checkout knowledge vault
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-          path: vault
-
       - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 9.15.9
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -53,7 +52,8 @@ jobs:
         run: |
           find site/src -mindepth 1 -maxdepth 1 ! -name '.vuepress' -exec rm -rf {} +
 
-          rsync -a vault/ site/src/ \
+          rsync -a ./ site/src/ \
+            --exclude 'site/' \
             --exclude '.git/' \
             --exclude '.github/' \
             --exclude '.obsidian/' \
@@ -62,15 +62,15 @@ jobs:
             --exclude '.trash/'
 
           mkdir -p site/src/.obsidian
-          cp vault/.obsidian/core-plugins.json site/src/.obsidian/core-plugins.json
-          cp vault/.obsidian/community-plugins.json site/src/.obsidian/community-plugins.json
+          cp .obsidian/core-plugins.json site/src/.obsidian/core-plugins.json
+          cp .obsidian/community-plugins.json site/src/.obsidian/community-plugins.json
 
           rm -f site/src/.vuepress/config_cover.js
           rm -f site/src/.vuepress/theme_cover.js
-          cp vault/.github/deploy/config_cover.js site/src/.vuepress/config_cover.js
-          cp vault/.github/deploy/theme_cover.js site/src/.vuepress/theme_cover.js
+          cp .github/deploy/config_cover.js site/src/.vuepress/config_cover.js
+          cp .github/deploy/theme_cover.js site/src/.vuepress/theme_cover.js
 
-          node vault/.github/deploy/prepare-vuepress-content.mjs site/src
+          node .github/deploy/prepare-vuepress-content.mjs site/src
 
           cat > site/scripts/git_config.json <<EOF
           {
@@ -98,7 +98,7 @@ jobs:
           touch src/.vuepress/dist/.nojekyll
 
       - name: Deploy gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.9.0
         with:
           branch: gh-pages
           folder: site/src/.vuepress/dist
