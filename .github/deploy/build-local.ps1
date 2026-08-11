@@ -48,6 +48,11 @@ Get-ChildItem -LiteralPath $vaultRoot -Force |
     Where-Object Name -notin $excludedRootItems |
     Copy-Item -Destination $siteSrc -Recurse -Force
 
+$siteObsidian = Join-Path $siteSrc '.obsidian'
+New-Item -ItemType Directory -Path $siteObsidian | Out-Null
+Copy-Item -LiteralPath (Join-Path $vaultRoot '.obsidian\core-plugins.json') -Destination $siteObsidian -Force
+Copy-Item -LiteralPath (Join-Path $vaultRoot '.obsidian\community-plugins.json') -Destination $siteObsidian -Force
+
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'config_cover.js') -Destination (Join-Path $siteSrc '.vuepress\config_cover.js') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'theme_cover.js') -Destination (Join-Path $siteSrc '.vuepress\theme_cover.js') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'git_config.local.json') -Destination (Join-Path $siteRoot 'scripts\git_config.json') -Force
@@ -65,7 +70,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Configuration generation failed with exit code $LASTEXITCODE" }
 
     $env:NODE_OPTIONS = '--max_old_space_size=20480'
-    & $corepack pnpm run docs:build
+    $vuepress = Join-Path $siteRoot 'node_modules\.bin\vuepress-vite.CMD'
+    & $vuepress build src
     if ($LASTEXITCODE -ne 0) { throw "VuePress build failed with exit code $LASTEXITCODE" }
 }
 finally {

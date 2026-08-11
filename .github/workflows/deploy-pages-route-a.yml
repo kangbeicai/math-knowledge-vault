@@ -61,6 +61,10 @@ jobs:
             --exclude '.codex/' \
             --exclude '.trash/'
 
+          mkdir -p site/src/.obsidian
+          cp vault/.obsidian/core-plugins.json site/src/.obsidian/core-plugins.json
+          cp vault/.obsidian/community-plugins.json site/src/.obsidian/community-plugins.json
+
           rm -f site/src/.vuepress/config_cover.js
           rm -f site/src/.vuepress/theme_cover.js
           cp vault/.github/deploy/config_cover.js site/src/.vuepress/config_cover.js

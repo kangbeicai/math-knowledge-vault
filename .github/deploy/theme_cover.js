@@ -20,4 +20,17 @@ export const themeOptions2 = {
   displayFooter: true,
   copyright: false,
   footer: "数学知识库 · 使用 Obsidian、VuePress 与 GitHub Pages 构建",
+  plugins: {
+    components: {
+      components: ["PDF", "VPCard"],
+    },
+    icon: {
+      prefix: "fa6-solid:",
+    },
+    blog: {
+      article: "/Blog/",
+    },
+    seo: true,
+    slimsearch: false,
+  },
 }
