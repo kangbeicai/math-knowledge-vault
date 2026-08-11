@@ -8,7 +8,7 @@ next: ""
 area: interdisciplinary
 status: active
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-08-11
 tags:
   - moc
   - meta
@@ -42,6 +42,11 @@ aliases:
 - [[99 Assets/README|附件与媒体资源]]
 - [[10 Maps/图示导航|图示导航]]
 - [[10 Maps/流形学习示意图规划|流形学习示意图规划]]
+
+## 网页发布
+
+- [[05 Meta/Obsidian 知识库网页部署|Obsidian 知识库网页部署]]：理解 Obsidian、静态网站生成器、GitHub Actions 与 GitHub Pages 的分工
+- [[70 Sources/Pkmer-Math 项目|Pkmer-Math 项目]]：参考项目的内容形式与部署来源记录
 
 ## 动态视图
 

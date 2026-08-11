@@ -6,7 +6,7 @@ prev: ""
 next: ""
 status: active
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-08-11
 tags:
   - home
 aliases:
@@ -62,3 +62,4 @@ aliases:
 - [[05 Meta/元数据规范|元数据规范]]
 - [[05 Meta/笔记生命周期|笔记生命周期]]
 - [[05 Meta/数学书写规范|数学书写规范]]
+- [[05 Meta/Obsidian 知识库网页部署|Obsidian 知识库网页部署]]

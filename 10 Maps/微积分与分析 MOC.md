@@ -8,7 +8,7 @@ next: ""
 area: analysis
 status: seed
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-08-11
 tags:
   - moc
 aliases: []
@@ -18,8 +18,9 @@ aliases: []
 
 ## 计划内容
 
+- [[20 Concepts/00 Foundations/实数、区间与绝对值|实数、区间与绝对值]]
 - 极限、连续与收敛
-- 一元与多元微分
+- [[20 Concepts/00 Foundations/导数、偏导数与方向导数|导数、偏导数与方向导数]]
 - [[20 Concepts/00 Foundations/多元链式法则与Jacobian|多元链式法则与Jacobian]]
 - 积分与测度
 - 函数空间

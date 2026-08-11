@@ -8,7 +8,7 @@ next: ""
 area: differential-geometry
 status: active
 created: 2026-06-17
-updated: 2026-06-26
+updated: 2026-08-11
 tags:
   - moc
   - manifold
@@ -62,13 +62,17 @@ flowchart LR
 
 ### 常用数学语言
 
+- [[20 Concepts/00 Foundations/集合、子集与幂集|集合、子集与幂集]]
 - [[20 Concepts/00 Foundations/映射、复合与原像|映射、复合与原像]]
 - [[20 Concepts/00 Foundations/向量空间与线性映射|向量空间与线性映射]]
+- [[20 Concepts/00 Foundations/基、维数与坐标|基、维数与坐标]]
 - [[20 Concepts/00 Foundations/对偶空间|对偶空间]]
+- [[20 Concepts/00 Foundations/导数、偏导数与方向导数|导数、偏导数与方向导数]]
 - [[20 Concepts/00 Foundations/多元链式法则与Jacobian|多元链式法则与Jacobian]]
 
 ### 拓扑预备
 
+- [[20 Concepts/00 Foundations/实数、区间与绝对值|实数、区间与绝对值]]：开区间、绝对值和实数轴上的距离
 - [[20 Concepts/01 Topology/拓扑|拓扑]]
 - [[20 Concepts/01 Topology/距离、邻域与开球|距离、邻域与开球]]：邻域、开邻域和开球的基础定义
 - [[20 Concepts/01 Topology/拓扑空间与开集|拓扑空间与开集]]
