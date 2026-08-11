@@ -15,6 +15,8 @@ export const themeOptions2 = {
       metaLocales: {
         editLink: "在 GitHub 上编辑此页",
       },
+      prevLink: false,
+      nextLink: false,
     },
   },
   displayFooter: true,

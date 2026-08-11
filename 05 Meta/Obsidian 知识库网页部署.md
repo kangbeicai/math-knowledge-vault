@@ -180,7 +180,7 @@ with:
 
 ### 风险
 
-- 构建依赖另一个人的 `main` 分支，对方改动可能导致我们的部署突然变化；
+- 如果构建器直接跟随另一个人的 `main` 分支，对方改动可能导致我们的部署突然变化；
 - 工作流拥有 `contents: write` 权限，因为它需要写入 `gh-pages`；
 - 构建器较复杂，初学时不容易判断问题来自笔记、VuePress、主题还是工作流；
 - `set-output` 等旧式 GitHub Actions 写法未来可能需要更新；
@@ -195,6 +195,9 @@ with:
 最接近 `Pkmer-Math` 当前效果，适合专门学习该项目的工作流。
 
 优点是已有较丰富的 Obsidian 语法支持；缺点是构建系统较重，需要理解其自定义脚本。
+
+> [!success] 当前采用路线
+> 本知识库已经采用路线 A，并将构建器固定在提交 `54cdc975bfad38ccd60244430afecc511d4592e1`。工作流不会自动跟随外部仓库的后续变化。
 
 ### 路线 B：Quartz
 
@@ -213,7 +216,81 @@ Quartz 是面向 Obsidian 知识库的静态网站生成器，通常较容易获
 
 这是 Obsidian 官方付费服务，配置最少，但不以 GitHub Actions 为核心，也不适合学习完整的静态网站部署过程。
 
-## 8. 推荐的学习顺序
+## 8. 路线 A 的实现文件
+
+| 文件 | 作用 |
+|---|---|
+| `.github/workflows/deploy-pages-route-a.yml` | 云端构建并发布 `gh-pages` |
+| `.github/deploy/config_cover.js` | 网站标题、描述和发布范围 |
+| `.github/deploy/theme_cover.js` | 导航、侧边栏、页脚和主题选项 |
+| `.github/deploy/build-local.ps1` | 使用 `pwsh 7` 在本地复现完整构建 |
+| `.github/deploy/git_config.local.json` | 本地构建时使用的仓库与基础路径配置 |
+
+云端工作流只在以下情况运行：
+
+- 推送到 `main`；
+- 在 GitHub Actions 页面手动触发。
+
+当前默认不发布：
+
+- `00 Inbox/`；
+- `80 Reviews/`；
+- `.obsidian/`、`.github/`、`.agents/` 等配置目录。
+
+## 9. 本地构建
+
+在仓库根目录使用 `pwsh 7` 运行：
+
+```powershell
+pwsh -NoProfile -File .github/deploy/build-local.ps1
+```
+
+脚本会：
+
+1. 下载固定版本的 LincZero 构建器；
+2. 在系统临时目录创建隔离的构建副本；
+3. 安装固定的 `pnpm 9.15.9` 依赖；
+4. 注入本项目配置；
+5. 生成 VuePress 静态网页。
+
+成功后会输出 `dist` 目录路径。所有生成文件都位于系统临时目录，不会写入知识库正文目录。
+
+## 10. 当前验证结果
+
+2026-08-11 已完成一次本地完整构建：
+
+- VuePress 成功生成 `189` 个页面；
+- 根首页 `index.html` 已生成；
+- [[10 Maps/数学知识地图|数学知识地图]]已生成对应 HTML；
+- [[30 Learning Paths/流形与微分几何学习路径|流形与微分几何学习路径]]已生成对应 HTML；
+- 本部署说明页已生成对应 HTML；
+- CSS、JavaScript、站点地图和 `robots.txt` 已生成。
+
+构建器原有的 `SlimSearch` 会因为部分长笔记中存在重复标题而生成重复索引 ID，因此当前站点配置暂时关闭全文搜索。页面渲染、侧边栏和普通导航不受影响。
+
+本库的 YAML 属性 `prev`、`next` 保存的是 Obsidian Wikilink，而 VuePress Theme Hope 默认会把同名属性当作网页路由。为避免主题生成错误的上一页、下一页地址，当前配置关闭了主题自带的页脚导航，继续使用每篇正文末尾已经正确转换的“导航”章节。
+
+构建时，`prepare-vuepress-content.mjs` 只在临时构建副本中把 `prev`、`next` 改名为 `obsidian_prev`、`obsidian_next`。知识库源文件和 Obsidian Properties 不会被修改。
+
+## 11. 首次公开发布步骤
+
+1. 提交并推送当前部署文件；
+2. 将部署配置合并到 `main`，或在 GitHub Actions 中手动运行 `Deploy knowledge vault`；
+3. 等待工作流创建 `gh-pages` 分支；
+4. 打开 GitHub 仓库的 `Settings → Pages`；
+5. 将发布来源设置为 `Deploy from a branch`；
+6. 选择 `gh-pages` 分支和 `/ (root)` 目录；
+7. 等待 GitHub Pages 给出站点地址。
+
+预期网址为：
+
+```text
+https://kangbeicai.github.io/math-knowledge-vault/
+```
+
+首次发布后，后续每次推送到 `main` 都会自动重新构建网站。
+
+## 12. 推荐的学习顺序
 
 对本知识库，建议分四步学习，不立即把整个仓库公开：
 
@@ -222,7 +299,7 @@ Quartz 是面向 Obsidian 知识库的静态网站生成器，通常较容易获
 3. **部署最小样例**：只发布几篇测试笔记，确认 GitHub Pages 路径和资源引用。
 4. **决定公开范围**：确认没有私人笔记、下载资料、版权受限文件或不希望公开的附件，再部署完整内容。
 
-## 9. 当前仓库状态
+## 13. 当前仓库状态
 
 当前内容仓库远端为：
 
@@ -236,12 +313,12 @@ https://github.com/kangbeicai/math-knowledge-vault.git
 obsidian-v2
 ```
 
-仓库目前没有 GitHub Pages 部署工作流。本页只完成原理与路线整理，尚未启用公开发布。
+仓库已经加入路线 A 的 GitHub Pages 部署工作流，但当前配置仍位于开发分支，尚未推送并触发公开发布。
 
 > [!important]
-> 真正部署前，需要先决定使用 VuePress 构建器还是 Quartz，以及网站是完全公开、只发布筛选后的目录，还是另外维护一个公开内容分支。
+> 工作流一旦在远端运行，仓库中的公开范围内容就会生成公开网页。提交前仍需检查附件版权和不希望公开的页面。
 
-## 10. 自检问题
+## 14. 自检问题
 
 - [ ] 能解释 GitHub Pages 为什么不能直接运行 Obsidian
 - [ ] 能说明 `main` 与 `gh-pages` 分支分别保存什么

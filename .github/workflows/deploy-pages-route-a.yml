@@ -35,7 +35,7 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 9.15.9
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -69,6 +69,8 @@ jobs:
           rm -f site/src/.vuepress/theme_cover.js
           cp vault/.github/deploy/config_cover.js site/src/.vuepress/config_cover.js
           cp vault/.github/deploy/theme_cover.js site/src/.vuepress/theme_cover.js
+
+          node vault/.github/deploy/prepare-vuepress-content.mjs site/src
 
           cat > site/scripts/git_config.json <<EOF
           {

@@ -57,6 +57,10 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'config_cover.js') -Destination 
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'theme_cover.js') -Destination (Join-Path $siteSrc '.vuepress\theme_cover.js') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'git_config.local.json') -Destination (Join-Path $siteRoot 'scripts\git_config.json') -Force
 
+$node = (Get-Command node -ErrorAction Stop).Source
+& $node (Join-Path $PSScriptRoot 'prepare-vuepress-content.mjs') $siteSrc
+if ($LASTEXITCODE -ne 0) { throw "VuePress content preparation failed with exit code $LASTEXITCODE" }
+
 $corepack = (Get-Command corepack -ErrorAction Stop).Source
 & $corepack prepare "pnpm@$pnpmVersion" --activate
 if ($LASTEXITCODE -ne 0) { throw "Unable to prepare pnpm $pnpmVersion" }
