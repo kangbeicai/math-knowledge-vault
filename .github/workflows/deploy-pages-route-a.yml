@@ -1,0 +1,100 @@
+name: Deploy knowledge vault
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout pinned site builder
+        uses: actions/checkout@v4
+        with:
+          repository: LincZero/LincZero.github.io
+          ref: 54cdc975bfad38ccd60244430afecc511d4592e1
+          fetch-depth: 1
+          path: site
+
+      - name: Checkout knowledge vault
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          path: vault
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
+
+      - name: Install site dependencies
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      - name: Prepare vault content and site configuration
+        shell: bash
+        run: |
+          find site/src -mindepth 1 -maxdepth 1 ! -name '.vuepress' -exec rm -rf {} +
+
+          rsync -a vault/ site/src/ \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.obsidian/' \
+            --exclude '.agents/' \
+            --exclude '.codex/' \
+            --exclude '.trash/'
+
+          rm -f site/src/.vuepress/config_cover.js
+          rm -f site/src/.vuepress/theme_cover.js
+          cp vault/.github/deploy/config_cover.js site/src/.vuepress/config_cover.js
+          cp vault/.github/deploy/theme_cover.js site/src/.vuepress/theme_cover.js
+
+          cat > site/scripts/git_config.json <<EOF
+          {
+            "GITHUB_WORKSPACE": "${GITHUB_WORKSPACE}",
+            "GITHUB_ACTION_PATH": "${GITHUB_ACTION_PATH}",
+            "GITHUB_ACTION_REPOSITORY": "${GITHUB_ACTION_REPOSITORY}",
+            "GITHUB_REPOSITORY_OWNER": "${GITHUB_REPOSITORY_OWNER}",
+            "GITHUB_ACTOR": "${GITHUB_ACTOR}",
+            "GITHUB_REPOSITORY": "${GITHUB_REPOSITORY}",
+            "CALC_URL": "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/",
+            "CALC_REPO_NAME": "${GITHUB_REPOSITORY#*/}"
+          }
+          EOF
+
+      - name: Generate VuePress configuration
+        working-directory: site
+        run: pnpm run gen-config
+
+      - name: Build static site
+        working-directory: site
+        env:
+          NODE_OPTIONS: --max_old_space_size=20480
+        run: |
+          pnpm run docs:build
+          touch src/.vuepress/dist/.nojekyll
+
+      - name: Deploy gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site/src/.vuepress/dist
+          clean: true
+          single-commit: true

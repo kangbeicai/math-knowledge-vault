@@ -57,8 +57,14 @@ Attachments/         附件
 
 ## 当前入口
 
-- `Home.md`
-- `10 Maps/数学知识地图.md`
-- `10 Maps/知识库系统 MOC.md`
-- `10 Maps/流形与微分几何 MOC.md`
-- `30 Learning Paths/流形与微分几何学习路径.md`
+- [[Home|Obsidian 动态主页]]
+- [[10 Maps/数学知识地图|数学知识地图]]
+- [[10 Maps/知识库系统 MOC|知识库系统 MOC]]
+- [[10 Maps/流形与微分几何 MOC|流形与微分几何 MOC]]
+- [[30 Learning Paths/流形与微分几何学习路径|流形与微分几何学习路径]]
+
+## 网页版说明
+
+网页版使用 VuePress 静态生成。Obsidian Bases 和 Templater 不会在浏览器中运行，但概念正文、Wikilink、Callout、数学公式、Mermaid 和图片会由网页构建器处理。
+
+部署原理与维护方式见 [[05 Meta/Obsidian 知识库网页部署|Obsidian 知识库网页部署]]。
