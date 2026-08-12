@@ -49,6 +49,8 @@ aliases:
 
 - [[10 Maps/数学知识地图|数学知识地图]]
 - [[10 Maps/知识库系统 MOC|知识库系统 MOC]]
+- [[25 Results/README|Results：定理、命题与引理]]
+- [[27 Methods/README|Methods：证明、构造与计算方法]]
 - [[10 Maps/图示导航|图示导航]]
 - [[10 Maps/术语索引|术语索引]]
 - [[10 Maps/问题索引|问题索引]]

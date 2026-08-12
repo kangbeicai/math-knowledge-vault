@@ -100,7 +100,12 @@ flowchart LR
 - [[20 Concepts/02 Geometry and Topology/切丛|切丛]]
 - [[20 Concepts/02 Geometry and Topology/光滑映射的微分与推前|光滑映射的微分与推前]]
 - [[20 Concepts/02 Geometry and Topology/浸入、淹没与嵌入|浸入、淹没与嵌入]]
-- [[20 Concepts/02 Geometry and Topology/子流形与正则值定理|子流形与正则值定理]]
+- [[20 Concepts/02 Geometry and Topology/子流形|子流形]]
+
+### 本阶段关键结果与方法
+
+- [[25 Results/正则值定理|正则值定理]]：把满秩水平集提升为光滑子流形
+- [[27 Methods/由约束方程计算切空间|由约束方程计算切空间]]：把正则值定理落到 Jacobian 核空间计算
 
 ## 3. 向量场
 
@@ -155,6 +160,7 @@ flowchart LR
 ## 关键问题
 
 - [[40 Questions/为什么需要流形而不只使用约束方程|为什么需要流形而不只使用约束方程]]
+- [[40 Questions/为什么需要dF_p而不只知道F(p)|为什么需要 dF_p 而不只知道 F(p)]]
 - [[40 Questions/为什么切向量与余切向量必须区分|为什么切向量与余切向量必须区分]]
 - [[40 Questions/为什么不同点的切向量不能直接相减|为什么不同点的切向量不能直接相减]]
 - [[40 Questions/为什么微分天然属于余切空间|为什么微分天然属于余切空间]]
