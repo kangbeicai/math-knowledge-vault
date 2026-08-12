@@ -8,7 +8,7 @@ next: ""
 area: interdisciplinary
 status: active
 created: 2026-06-17
-updated: 2026-08-11
+updated: 2026-08-12
 tags:
   - moc
   - meta
@@ -26,7 +26,7 @@ aliases:
 
 ## 架构与设计
 
-- [[05 Meta/知识库架构 V2|知识库架构 V2]]：目录、内容层和信息流
+- [[05 Meta/知识库架构 V2|知识库架构 V2.1]]：目录、内容层和信息流
 - [[05 Meta/知识库设计原则|知识库设计原则]]：拆页原则、首次出现规则和渐进式完善
 
 ## 维护规范
@@ -58,6 +58,8 @@ aliases:
 ## 内容入口
 
 - [[数学知识地图]]
+- [[25 Results/README|Results：定理、命题与引理]]
+- [[27 Methods/README|Methods：证明、构造与计算方法]]
 - [[术语索引]]
 - [[问题索引]]
 - [[练习索引]]

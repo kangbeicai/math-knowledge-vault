@@ -8,7 +8,7 @@ next: ""
 area: mathematics
 status: active
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-08-12
 tags:
   - index
 aliases: []
@@ -20,10 +20,12 @@ aliases: []
 
 当前以“流形与微分几何”为第一条学习主线，架构面向全部数学内容，可继续扩展到分析、代数、概率、微分方程、优化、数值数学和数学物理。
 
-## V2 特点
+## V2.1 特点
 
 - **MOC 知识地图**：表达概念关系，而不只是文件目录。
 - **一概念一笔记**：持续补充动机、定义、例子、反例和应用。
+- **Concept / Result / Method 分层**：区分数学对象、可复用定理结果和证明/计算方法。
+- **硬依赖 / 按需支撑分离**：学习路径只被真正不可跳过的前置知识约束。
 - **统一 Properties**：描述类型、领域、状态、前置知识和来源。
 - **Obsidian Bases**：动态查看概念、问题、来源和练习。
 - **问题驱动**：保留真正的理解障碍和关闭标准。
@@ -45,6 +47,8 @@ aliases: []
 10 Maps/             MOC、索引与导航
 15 Bases/            Obsidian 原生动态视图
 20 Concepts/         原子概念笔记
+25 Results/          定理、命题与引理
+27 Methods/          证明、构造与计算方法
 30 Learning Paths/   学习路径
 40 Questions/        理解问题
 50 Exercises/        练习与证明

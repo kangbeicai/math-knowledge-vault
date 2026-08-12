@@ -8,7 +8,7 @@ next: ""
 area: differential-geometry
 status: active
 created: 2026-06-17
-updated: 2026-08-11
+updated: 2026-08-12
 tags:
   - moc
   - manifold
@@ -31,15 +31,17 @@ flowchart LR
     C --> D[标量场]
     D --> E[光滑映射]
     E --> F[切向量与切空间]
-    F --> G[向量场与流]
-    G --> H[Lie括号]
-    F --> I[子流形]
-    F --> J[余切空间]
-    F --> K[张量]
-    J --> K
-    K --> L[微分形式]
+    F --> G[dF 与推前]
+    G --> H[浸入/淹没/子流形]
+    H --> I[向量场与流]
+    I --> J[Lie括号]
+    J --> K[余切空间与拉回]
+    K --> L[张量与微分形式]
     L --> M[楔积与外微分]
-    M --> N[拉回与Stokes]
+    M --> N[微分形式拉回]
+    N --> O[定向与边界]
+    O --> P[分割统一与积分]
+    P --> Q[Stokes定理]
 ```
 
 > [!note]
@@ -96,7 +98,7 @@ flowchart LR
 - [[20 Concepts/02 Geometry and Topology/切向量|切向量]]
 - [[20 Concepts/02 Geometry and Topology/切空间|切空间]]
 - [[20 Concepts/02 Geometry and Topology/切丛|切丛]]
-- [[20 Concepts/02 Geometry and Topology/推前与拉回|推前与拉回]]
+- [[20 Concepts/02 Geometry and Topology/光滑映射的微分与推前|光滑映射的微分与推前]]
 - [[20 Concepts/02 Geometry and Topology/浸入、淹没与嵌入|浸入、淹没与嵌入]]
 - [[20 Concepts/02 Geometry and Topology/子流形与正则值定理|子流形与正则值定理]]
 
@@ -110,13 +112,18 @@ flowchart LR
 
 - [[20 Concepts/02 Geometry and Topology/余切空间|余切空间]]
 - [[20 Concepts/02 Geometry and Topology/余切丛|余切丛]]
+- [[20 Concepts/02 Geometry and Topology/协向量的拉回|协向量的拉回]]
 - [[20 Concepts/02 Geometry and Topology/微分与梯度|微分与梯度]]
 - [[20 Concepts/02 Geometry and Topology/张量与张量场|张量与张量场]]
 - [[20 Concepts/02 Geometry and Topology/交替张量与微分形式|交替张量与微分形式]]
 - [[20 Concepts/02 Geometry and Topology/楔积|楔积]]
 - [[20 Concepts/02 Geometry and Topology/外微分|外微分]]
 - [[20 Concepts/02 Geometry and Topology/微分形式的拉回|微分形式的拉回]]
-- [[20 Concepts/02 Geometry and Topology/流形上的积分与Stokes定理|流形上的积分与Stokes定理]]
+- [[20 Concepts/02 Geometry and Topology/流形的定向|流形的定向]]
+- [[20 Concepts/02 Geometry and Topology/带边界流形与边界定向|带边界流形与边界定向]]
+- [[20 Concepts/02 Geometry and Topology/分割统一|分割统一]]
+- [[20 Concepts/02 Geometry and Topology/微分形式的积分|微分形式的积分]]
+- [[25 Results/Stokes定理|Stokes定理]]
 
 ## 5. 后续结构
 
@@ -126,7 +133,6 @@ flowchart LR
 - 联络与协变导数
 - 平行移动与测地线
 - 曲率
-- 分割统一
 - de Rham 上同调
 - 李群与李代数
 - 辛几何

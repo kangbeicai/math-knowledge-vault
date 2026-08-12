@@ -8,7 +8,7 @@ next: ""
 area: calculus
 status: 可复述
 created: 2026-06-17
-updated: 2026-08-11
+updated: 2026-08-12
 tags:
   - concept
 aliases: []
@@ -16,7 +16,7 @@ prerequisites:
   - "[[20 Concepts/00 Foundations/映射、复合与原像|映射、复合与原像]]"
   - "[[20 Concepts/00 Foundations/导数、偏导数与方向导数|导数、偏导数与方向导数]]"
 related:
-  - "[[20 Concepts/02 Geometry and Topology/推前与拉回|推前与拉回]]"
+  - "[[20 Concepts/02 Geometry and Topology/光滑映射的微分与推前|光滑映射的微分与推前]]"
 sources:
   - "[[70 Sources/Pkmer-Math 项目|Pkmer-Math 项目]]"
 ---
@@ -188,4 +188,4 @@ $$
 ## 下一步
 
 - [[20 Concepts/02 Geometry and Topology/坐标图、图册与坐标转换|坐标图、图册与坐标转换]]
-- [[20 Concepts/02 Geometry and Topology/推前与拉回|推前与拉回]]
+- [[20 Concepts/02 Geometry and Topology/光滑映射的微分与推前|光滑映射的微分与推前]]

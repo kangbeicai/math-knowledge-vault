@@ -8,7 +8,7 @@ next: ""
 area: interdisciplinary
 status: active
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-12
 tags:
   - meta
   - obsidian
@@ -338,6 +338,6 @@ obsidian-v2
 ## 相关页面
 
 - [[70 Sources/Pkmer-Math 项目|Pkmer-Math 项目]]
-- [[05 Meta/知识库架构 V2|知识库架构 V2]]
+- [[05 Meta/知识库架构 V2|知识库架构 V2.1]]
 - [[05 Meta/知识库设计原则|知识库设计原则]]
 - [[05 Meta/图片与图表规范|图片与图表规范]]
