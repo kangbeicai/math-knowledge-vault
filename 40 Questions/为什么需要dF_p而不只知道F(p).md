@@ -8,7 +8,7 @@ next: ""
 area: differential-geometry
 status: answered
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-13
 tags:
   - question
   - differential
@@ -33,7 +33,7 @@ $$
 为什么还需要额外定义
 
 $$
-dF_p:T_pM\to T_{F(p)}N？
+dF_p:T_pM\to T_{F(p)}N\text{？}
 $$
 
 ## 回答
