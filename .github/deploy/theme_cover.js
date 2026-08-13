@@ -1,3 +1,10 @@
+const searchSegmenter = new Intl.Segmenter("zh-CN", { granularity: "word" })
+
+const tokenizeSearchText = (text) =>
+  Array.from(searchSegmenter.segment(text.normalize("NFKC")))
+    .filter(({ segment, isWordLike }) => isWordLike && segment.trim())
+    .map(({ segment }) => segment)
+
 export const themeOptions2 = {
   hostname: "kangbeicai.github.io",
   repo: "kangbeicai/math-knowledge-vault",
@@ -35,6 +42,22 @@ export const themeOptions2 = {
     seo: true,
     slimsearch: {
       indexContent: true,
+      suggestion: false,
+      indexOptions: {
+        tokenize: tokenizeSearchText,
+      },
+      customFields: [
+        {
+          getter: (page) => {
+            const aliases = page.frontmatter.aliases
+
+            if (Array.isArray(aliases)) return aliases.map(String)
+            if (typeof aliases === "string") return aliases
+            return null
+          },
+          formatter: "别名：$content",
+        },
+      ],
     },
   },
 }

@@ -69,6 +69,9 @@ jobs:
           rm -f site/src/.vuepress/theme_cover.js
           cp .github/deploy/config_cover.js site/src/.vuepress/config_cover.js
           cp .github/deploy/theme_cover.js site/src/.vuepress/theme_cover.js
+          cp .github/deploy/search-client-config.js site/src/.vuepress/search-client-config.js
+
+          node .github/deploy/patch-vuepress-search.mjs site
 
           node .github/deploy/prepare-vuepress-content.mjs site/src
 
