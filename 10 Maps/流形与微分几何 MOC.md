@@ -8,7 +8,7 @@ next: ""
 area: differential-geometry
 status: active
 created: 2026-06-17
-updated: 2026-08-12
+updated: 2026-08-13
 tags:
   - moc
   - manifold
@@ -68,6 +68,7 @@ flowchart LR
 - [[20 Concepts/00 Foundations/映射、复合与原像|映射、复合与原像]]
 - [[20 Concepts/00 Foundations/向量空间与线性映射|向量空间与线性映射]]
 - [[20 Concepts/00 Foundations/基、维数与坐标|基、维数与坐标]]
+- [[20 Concepts/00 Foundations/线性映射的核、像与秩|线性映射的核、像与秩]]：理解 $\ker dF_p$、$\operatorname{im}dF_p$ 与 rank
 - [[20 Concepts/00 Foundations/对偶空间|对偶空间]]
 - [[20 Concepts/00 Foundations/导数、偏导数与方向导数|导数、偏导数与方向导数]]
 - [[20 Concepts/00 Foundations/多元链式法则与Jacobian|多元链式法则与Jacobian]]

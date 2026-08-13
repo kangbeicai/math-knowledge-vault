@@ -8,7 +8,7 @@ next: ""
 area: linear-algebra
 status: seed
 created: 2026-06-17
-updated: 2026-08-11
+updated: 2026-08-13
 tags:
   - moc
 aliases: []
@@ -21,7 +21,8 @@ aliases: []
 - [[20 Concepts/00 Foundations/向量空间与线性映射|向量空间与线性映射]]
 - [[20 Concepts/00 Foundations/基、维数与坐标|基、维数与坐标]]
 - 子空间与商空间
-- 核、像与秩
+- [[20 Concepts/00 Foundations/线性映射的核、像与秩|线性映射的核、像与秩]]
+- [[25 Results/秩-零化度定理|秩-零化度定理]]
 - [[20 Concepts/00 Foundations/对偶空间|对偶空间]]
 
 ## 后续
