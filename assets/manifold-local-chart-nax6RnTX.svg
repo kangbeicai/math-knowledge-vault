@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">局部坐标图示意</title>
+  <desc id="desc">坐标图把流形中的一个局部开集映到欧氏空间中的开集。左边只是抽象流形局部的示意画法，不表示整个流形必须嵌入外部二维或三维空间。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .title { font-size: 32px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #4b5563; }
+      .section { font-size: 22px; font-weight: 700; }
+      .label { font-size: 18px; }
+      .small { font-size: 15px; fill: #4b5563; }
+      .math { font-family: "Times New Roman", serif; font-size: 24px; fill: #111827; }
+      .panel { fill: #f9fafb; stroke: #e5e7eb; stroke-width: 1.5; }
+      .manifold { fill: #dbeafe; stroke: #2563eb; stroke-width: 3.5; }
+      .patch { fill: #ffedd5; stroke: #ea580c; stroke-width: 3.5; }
+      .coord { fill: #eef2ff; stroke: #4f46e5; stroke-width: 3.5; }
+      .axis { fill: none; stroke: #334155; stroke-width: 3.2; stroke-linecap: round; marker-end: url(#arrow); }
+      .arrow { fill: none; stroke: #334155; stroke-width: 3.5; stroke-linecap: round; marker-end: url(#arrow); }
+      .point { fill: #111827; stroke: #ffffff; stroke-width: 2; }
+      .warning { fill: #fff7ed; stroke: #fdba74; stroke-width: 1.6; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#ffffff"/>
+
+  <text x="600" y="52" text-anchor="middle" class="text title">坐标图：给流形的一小块分配欧氏坐标</text>
+  <text x="600" y="84" text-anchor="middle" class="text subtitle">重点是局部开集到欧氏开集的同胚，不是把整个流形画进外部空间</text>
+
+  <rect x="56" y="120" width="456" height="470" rx="10" class="panel"/>
+  <rect x="688" y="120" width="456" height="470" rx="10" class="panel"/>
+
+  <!-- Abstract manifold side -->
+  <text x="284" y="160" text-anchor="middle" class="text section">流形 M 的局部</text>
+  <text x="284" y="186" text-anchor="middle" class="text small">左侧只是示意画法，不是定义要求的嵌入图像</text>
+
+  <path d="M112 375 C135 245, 292 196, 415 260 C510 310, 472 455, 332 505 C205 552, 88 494, 112 375 Z" class="manifold"/>
+  <path d="M188 374 C204 302, 302 270, 371 311 C430 346, 405 435, 321 461 C241 486, 173 445, 188 374 Z" class="patch"/>
+  <circle cx="305" cy="389" r="8" class="point"/>
+  <text x="322" y="382" class="math">p</text>
+  <text x="300" y="350" text-anchor="middle" class="math">U</text>
+  <text x="300" y="532" text-anchor="middle" class="text label">U 是 M 中的一个开邻域</text>
+
+  <!-- Arrow -->
+  <path d="M525 340 C590 285, 636 285, 675 340" class="arrow"/>
+  <text x="600" y="276" text-anchor="middle" class="math">φ</text>
+  <text x="600" y="306" text-anchor="middle" class="text small">坐标图</text>
+
+  <!-- Coordinate image side -->
+  <text x="916" y="160" text-anchor="middle" class="text section">坐标值所在的欧氏空间</text>
+  <text x="916" y="186" text-anchor="middle" class="text small">右侧是 Rⁿ 中的开集，用来记录局部坐标</text>
+
+  <path d="M750 520 H1090" class="axis"/>
+  <path d="M750 520 V220" class="axis"/>
+  <text x="1080" y="555" class="math">x₁</text>
+  <text x="714" y="232" class="math">x₂</text>
+
+  <path d="M812 390 C825 306, 956 270, 1032 330 C1093 379, 1057 468, 957 491 C867 512, 794 462, 812 390 Z" class="coord"/>
+  <circle cx="948" cy="405" r="8" class="point"/>
+  <text x="966" y="398" class="math">φ(p)</text>
+  <text x="948" y="360" text-anchor="middle" class="math">φ(U)</text>
+  <text x="948" y="532" text-anchor="middle" class="text label">φ(U) 是 Rⁿ 中的开集</text>
+
+  <rect x="105" y="630" width="990" height="70" rx="9" class="warning"/>
+  <text x="130" y="660" class="text label">提醒：图中把 M 画成一块形状只是为了帮助想象；坐标图的定义不要求整个 M 先嵌入某个二维或三维空间。</text>
+  <text x="130" y="686" class="text small">真正要求的是：存在同胚 φ: U → φ(U)，其中 U 是流形中的开集，φ(U) 是欧氏空间中的开集。</text>
+</svg>
