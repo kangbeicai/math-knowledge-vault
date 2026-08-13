@@ -33,6 +33,8 @@ export const themeOptions2 = {
       article: "/Blog/",
     },
     seo: true,
-    slimsearch: false,
+    slimsearch: {
+      indexContent: true,
+    },
   },
 }
